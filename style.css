@@ -70,3 +70,13 @@ body {
     transition: all .3s ease-in-out;
   }
   
+.row > div,
+.task-area {
+     background: lightgrey;
+     border: 2px solid teal;
+     padding: 0 auto;
+     justify-content: center;
+     align-items: center;
+     display: flex;
+}
+
