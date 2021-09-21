@@ -71,7 +71,8 @@ body {
   }
   
 .row > div,
-.task-area {
+#add-button,
+#task-area {
      background: lightgrey;
      border: 2px solid teal;
      padding: 0 auto;
