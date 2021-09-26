@@ -3,18 +3,18 @@ var now = moment();
 $(document).ready(function(){ 
     forLoop();
     $("#currentDay").text(now.format("dddd MMMM DD, YYYY"));
-
   });
 
 
 function forLoop(containerVar){
         var startTime = moment(8,"H");
+        console.log(startTime);
     for (let i = 0; i < 10; i++){
         const containerVar=$(".container");
         var row = $("<div />", {class: 'row'});
         var timeColumn = $("<div />", {class:'hour'})
         // timeColumn.text(moment().from('HH'));
-        timeColumn.text(startTime.format("H a"));
+        timeColumn.text(startTime.format("HH:mm a"));
         row.append(timeColumn);
         containerVar.append(row);
         var taskArea = $("<input />", {class: 'col-sm', type: 'text', id: 'task-area'});
@@ -32,7 +32,7 @@ function getTimeCssClass(checkTime){
     if (checkTime.isBefore(now)){
         return ("past");
     }
-    if (checkTime.isPresent(now)){
+    if (checkTime.isSame(now)){
         return ("present");
     }
     if (checkTime.isAfter(now)){
