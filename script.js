@@ -40,12 +40,14 @@ function getTimeCssClass(checkTime){
     }
 }
 
-document.getElementById('task-area');
+// document.getElementById('task-area');
 
 function clickButton(i){
     console.log(inputArray[i]);
-    localStorage.setItem(i, taskArea);
-    localStorage.getItem()
+    var input = document.getElementById('task-area').value;
+    localStorage.setItem('input', input);
+    localStorage.getItem('input', input);
+
 }
 
 
